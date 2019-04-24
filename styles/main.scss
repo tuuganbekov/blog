@@ -6,14 +6,24 @@ html {
     padding: 0;
 }
 
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontFamily;
+}
+
 .section {
     width: 100%;
     @include displayFlex(column);
 }
 
 .wrap {
-    width: 80%;
-    max-width: 1170px;
+    width: 1170px;
 }
 
 .header {
@@ -94,11 +104,90 @@ html {
     }
 }
 
+// main section
 .main {
     @include displayFlex(column);
     align-items: center;
-    .main-wrap {
+    .wrap {
         @include displayFlex(row);
-        align-items: center;
-    }
-}
+        justify-content: space-between;
+        .wrap__post {
+            width: 760px;
+            @include displayFlex(column);
+            margin-bottom: 30px;
+            .post__date {
+                color: #4C7DBA;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .post__img {
+                margin-bottom: 20px;
+            }
+            .post__title {
+                font-size: 24px;
+                margin-bottom: 5px;
+                text-decoration: none;
+                color: $primaryColor;
+            }
+            .post__author {
+                text-transform: uppercase;
+                font-size: 12px;
+                margin-bottom: 20px;
+                .author__link {
+                    text-decoration: none;
+                    color: $primaryColor;
+                }
+            }
+            .post__text {
+                margin: 0;
+                font-size: 16px;
+            }
+        } // wrap__post end
+        //sidebar start
+        .main-aside {
+            width: 360px;
+            @include displayFlex(column);
+            .aside__title {
+                font-size: 20px;
+                padding-bottom: 10px;
+                margin-right: 60%;
+                border-bottom: 2px solid #4C7DBA;
+            }
+            .aside__search {
+                width: 100%;
+                margin-top: 55px;
+                @include displayFlex(column);
+                background-color: #ededed;
+                padding: 18px 20px;
+                label {
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    font-size: 20px;
+                    margin-bottom: 5px;
+                }
+            } // aside__search end
+            .populars {
+                width: 100%;
+                .populars__list {
+                    width: 100%;
+                    padding: 0;
+                    @include displayFlex(row);
+                    flex-wrap: wrap;
+                    list-style: none;
+                    .popular__item {
+                        display: flex;
+                        margin-right: 5px;
+                        margin-bottom: 20px;
+                        .popular__link {
+                            padding: 15px;
+                            background: #ededed;
+                            text-decoration: none;
+                            color: $secondaryColor;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        } // main-aside end
+    } // wrap end
+} // main end
