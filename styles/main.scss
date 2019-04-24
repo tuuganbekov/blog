@@ -1,0 +1,104 @@
+@import 'mixins';
+@import 'variables';
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 100%;
+    @include displayFlex(column);
+}
+
+.wrap {
+    width: 80%;
+    max-width: 1170px;
+}
+
+.header {
+    width: 100%;
+    box-sizing: border-box;
+    @include displayFlex(row);
+    justify-content: center;
+    .wrap {
+        @include displayFlex(row);
+        justify-content: center;
+        .search {
+            @include displayFlex(row);
+            align-items: center;
+            .search__input {
+                border: none;
+                outline: none;
+                background: none;
+                float: left;
+                padding: 0;
+                transition: 0.4s all;
+                line-height: 20px;
+                width: 0;
+            }
+            .search__button {
+                color: #333;
+                float: right;
+                text-decoration: none;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+            }
+            .search__button:hover input {
+                width: 240px;
+                padding: 0 6px;
+            }
+        }
+        .header-logo {
+            @include displayFlex(row);
+            justify-content: center;
+            align-items: center;
+        }
+        .nav {
+            width: 40%;
+            @include displayFlex(row);
+            justify-content: space-between;
+            .nav__items {
+                @include displayFlex(column);
+                .nav-items__link {
+                    color: $primaryColor;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+                .nav-items__link:hover {
+                    color: blue;
+                    .dropdown-content {
+                        @include displayFlex(column);
+                    }
+                } // nav-link:hover end
+            } //nav-items end
+        } // nav end
+    } //wrap end
+} //headen end
+.dropdown-content {
+    display: none;
+}
+
+.section__head {
+    height: 400px;
+    margin-bottom: 40px;
+    background-image: url(../images/1.png);
+    color: #fff;
+    text-transform: uppercase;
+    @include displayFlex(column);
+    align-items: center;
+    .wrap {
+        @include displayFlex(column);
+        justify-content: flex-start;
+    }
+}
+
+.main {
+    @include displayFlex(column);
+    align-items: center;
+    .main-wrap {
+        @include displayFlex(row);
+        align-items: center;
+    }
+}
