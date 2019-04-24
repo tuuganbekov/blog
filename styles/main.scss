@@ -6,6 +6,10 @@ html {
     padding: 0;
 }
 
+div {
+    box-sizing: border-box;
+}
+
 p,
 a,
 h1,
@@ -33,7 +37,7 @@ h6 {
     justify-content: center;
     .wrap {
         @include displayFlex(row);
-        justify-content: center;
+        justify-content: space-around;
         .search {
             @include displayFlex(row);
             align-items: center;
@@ -150,7 +154,7 @@ h6 {
             .aside__title {
                 font-size: 20px;
                 padding-bottom: 10px;
-                margin-right: 60%;
+                margin-right: 50%;
                 border-bottom: 2px solid #4C7DBA;
             }
             .aside__search {
@@ -176,14 +180,38 @@ h6 {
                     list-style: none;
                     .popular__item {
                         display: flex;
-                        margin-right: 5px;
+                        margin-right: 10px;
                         margin-bottom: 20px;
                         .popular__link {
-                            padding: 15px;
+                            padding: 10px;
                             background: #ededed;
                             text-decoration: none;
                             color: $secondaryColor;
                             font-weight: bold;
+                        } //popular__link end
+                    } //popular__item end
+                } //popular__list end
+            } // populars end
+            .recent-posts {
+                width: 100%;
+                @include displayFlex(column);
+                .recent__post {
+                    @include displayFlex(column);
+                    margin-bottom: 20px;
+                    .post__title {
+                        color: $secondaryColor;
+                        margin: 10px 0;
+                    }
+                    .recent-post__content {
+                        @include displayFlex(row);
+                        justify-content: space-between;
+                        .recent-post__image {
+                            width: 100px;
+                            height: 100px;
+                        }
+                        .recent-post__text {
+                            margin: 0;
+                            width: 250px;
                         }
                     }
                 }
