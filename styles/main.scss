@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $fontFamily;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 .section {
@@ -115,6 +115,12 @@ h6 {
     .wrap {
         @include displayFlex(row);
         justify-content: space-between;
+        .post-section {
+            .pagination {
+                display: flex;
+                justify-content: center;
+            }
+        }
         .wrap__post {
             width: 760px;
             @include displayFlex(column);
@@ -126,6 +132,8 @@ h6 {
             }
             .post__img {
                 margin-bottom: 20px;
+                width: 100%;
+                height: auto;
             }
             .post__title {
                 font-size: 24px;
@@ -152,14 +160,15 @@ h6 {
             width: 360px;
             @include displayFlex(column);
             .aside__title {
-                font-size: 20px;
+                font-size: 24px;
+                font-weight: bold;
                 padding-bottom: 10px;
                 margin-right: 50%;
                 border-bottom: 2px solid #4C7DBA;
             }
             .aside__search {
                 width: 100%;
-                margin-top: 55px;
+                margin: 30px 0 40px;
                 @include displayFlex(column);
                 background-color: #ededed;
                 padding: 18px 20px;
@@ -172,6 +181,7 @@ h6 {
             } // aside__search end
             .populars {
                 width: 100%;
+                margin-bottom: 30px;
                 .populars__list {
                     width: 100%;
                     padding: 0;
@@ -194,6 +204,7 @@ h6 {
             } // populars end
             .recent-posts {
                 width: 100%;
+                margin-bottom: 30px;
                 @include displayFlex(column);
                 .recent__post {
                     @include displayFlex(column);
@@ -212,10 +223,80 @@ h6 {
                         .recent-post__text {
                             margin: 0;
                             width: 250px;
-                        }
+                        } // recent-post__text end
+                    } //recent-post__content end
+                } // recent__post end
+            } // recent-posts end
+            .aside-categories {
+                @include displayFlex(column);
+                .aside-categories__list {
+                    @include displayFlex(column);
+                    list-style: none;
+                    padding: 0;
+                    //line-height: 30px;
+                    .aside-categories__item {
+                        border-bottom: 1px solid #686666;
+                        margin: 10px 0;
+                        padding-bottom: 5px;
+                    }
+                    .aside-categories__link {
+                        text-decoration: none;
+                        color: #000;
+                        font-weight: bold;
+                    }
+                    .aside-categories__link:hover {
+                        color: #4C7DBA;
                     }
                 }
             }
         } // main-aside end
     } // wrap end
 } // main end
+.contact {
+    height: 600px;
+    @include displayFlex(column);
+    justify-content: center;
+    align-items: center;
+    background-color: #0055a6;
+    .wrap {
+        width: 1170px;
+        @include displayFlex(column);
+        .contact__text {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            color: #fff;
+        }
+        .contact__input {
+            width: 100%;
+            @include displayFlex(column);
+            justify-content: center;
+            align-items: center;
+            .input-login {
+                width: 80%;
+                @include displayFlex(row);
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .login__item {
+                    width: 49.5%;
+                    margin-bottom: 10px;
+                } // login__item end
+            } // input-login end
+            .input-msg {
+                width: 80%;
+                margin-bottom: 10px;
+                .msg__textarea {
+                    width: 100%;
+                    height: 200px;
+                }
+            } //input-msg end
+            .input-submit {
+                .submit__link {
+                    padding: 10px 20px;
+                    background-color: #ededed;
+                    color: #000;
+                } //.submit__link end
+            } // input-submit end
+        } // contact-input
+    }
+}
