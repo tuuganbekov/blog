@@ -36,130 +36,17 @@ h6 {
 }
 
 .header {
+  background-color: #F8F9FA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .navbar {
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.header .wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.header .wrap .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .wrap .search .search__input {
-  border: none;
-  outline: none;
-  background: none;
-  float: left;
-  padding: 0;
-  -webkit-transition: 0.4s all;
-  transition: 0.4s all;
-  line-height: 20px;
-  width: 0;
-}
-
-.header .wrap .search .search__button {
-  color: #333;
-  float: right;
-  text-decoration: none;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-}
-
-.header .wrap .search .search__button:hover input {
-  width: 240px;
-  padding: 0 6px;
-}
-
-.header .wrap .header-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .wrap .nav {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.header .wrap .nav .nav__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.header .wrap .nav .nav__items .nav-items__link {
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.header .wrap .nav .nav__items .nav-items__link:hover {
-  color: blue;
-}
-
-.header .wrap .nav .nav__items .nav-items__link:hover .dropdown-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .dropdown-content {
@@ -179,6 +66,9 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -532,5 +422,29 @@ h6 {
   padding: 10px 20px;
   background-color: #ededed;
   color: #000;
+}
+
+.contact .wrap .contact__input .input-submit .submit__link:hover {
+  background-color: #383838;
+  text-decoration: none;
+}
+
+.footer {
+  height: 100px;
+  background-color: #101624;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer__text {
+  font-weight: bold;
+  color: #ededed;
 }
 /*# sourceMappingURL=main.css.map */

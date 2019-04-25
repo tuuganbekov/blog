@@ -31,65 +31,14 @@ h6 {
 }
 
 .header {
-    width: 100%;
-    box-sizing: border-box;
-    @include displayFlex(row);
+    background-color: #F8F9FA;
+    display: flex;
     justify-content: center;
-    .wrap {
-        @include displayFlex(row);
-        justify-content: space-around;
-        .search {
-            @include displayFlex(row);
-            align-items: center;
-            .search__input {
-                border: none;
-                outline: none;
-                background: none;
-                float: left;
-                padding: 0;
-                transition: 0.4s all;
-                line-height: 20px;
-                width: 0;
-            }
-            .search__button {
-                color: #333;
-                float: right;
-                text-decoration: none;
-                width: 20px;
-                height: 20px;
-                text-align: center;
-            }
-            .search__button:hover input {
-                width: 240px;
-                padding: 0 6px;
-            }
-        }
-        .header-logo {
-            @include displayFlex(row);
-            justify-content: center;
-            align-items: center;
-        }
-        .nav {
-            width: 40%;
-            @include displayFlex(row);
-            justify-content: space-between;
-            .nav__items {
-                @include displayFlex(column);
-                .nav-items__link {
-                    color: $primaryColor;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                }
-                .nav-items__link:hover {
-                    color: blue;
-                    .dropdown-content {
-                        @include displayFlex(column);
-                    }
-                } // nav-link:hover end
-            } //nav-items end
-        } // nav end
-    } //wrap end
-} //headen end
+    .navbar {
+        width: 100%;
+    }
+}
+
 .dropdown-content {
     display: none;
 }
@@ -101,6 +50,7 @@ h6 {
     color: #fff;
     text-transform: uppercase;
     @include displayFlex(column);
+    justify-content: center;
     align-items: center;
     .wrap {
         @include displayFlex(column);
@@ -296,7 +246,22 @@ h6 {
                     background-color: #ededed;
                     color: #000;
                 } //.submit__link end
+                .submit__link:hover {
+                    background-color: rgb(56, 56, 56);
+                    text-decoration: none;
+                }
             } // input-submit end
         } // contact-input
+    }
+} //.contact end
+.footer {
+    height: 100px;
+    background-color: #101624;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer__text {
+        font-weight: bold;
+        color: #ededed;
     }
 }
