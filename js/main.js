@@ -41,7 +41,6 @@ onSearchBtnClick = (event) => {
     });
     sessionStorage.setItem('blogResponse', JSON.stringify(newPosts));
     renderPosts();
-    newPosts = [];
     getPostsFromApi();
 }
 
@@ -59,6 +58,5 @@ onTagButtonClick = (event) => {
     console.log(oldPosts);
     sessionStorage.setItem('blogResponse', JSON.stringify(newPosts));
     renderPosts();
-    newPosts = [];
     getPostsFromApi();
 }
