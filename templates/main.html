@@ -55,34 +55,8 @@
     </section>
     <section class="main">
         <div class="wrap">
-            <div class="post-section">
-                <div class="wrap__post">
-                    <h3 class="post__date">28.03.2019</h3>
-                    <img src="../images/2.jpg" alt="post image" class="post__img">
-                    <a href="#" class="post__title">Connexion-Example of Business Blog</a>
-                    <span class="post__author">BY <a href="#" class="author__link">DAVID HYMAN</a>/ 340 VIEWS</span>
-                    <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum sed, mollitia a laboriosam modi sequi minima iusto molestias dicta?</p>
-                </div>
-                <div class="wrap__post">
-                    <h3 class="post__date">28.03.2019</h3>
-                    <img src="../images/4.jpg" alt="post image" class="post__img">
-                    <a href="#" class="post__title">Connexion-Example of Business Blog</a>
-                    <span class="post__author">BY <a href="#" class="author__link">DAVID HYMAN</a>/ 340 VIEWS</span>
-                    <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum sed, mollitia a laboriosam modi sequi minima iusto molestias dicta?</p>
-                </div>
-                <div class="wrap__post">
-                    <h3 class="post__date">28.03.2019</h3>
-                    <img src="../images/6.jpg" alt="post image" class="post__img">
-                    <a href="#" class="post__title">Connexion-Example of Business Blog</a>
-                    <span class="post__author">BY <a href="#" class="author__link">DAVID HYMAN</a>/ 340 VIEWS</span>
-                    <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum sed, mollitia a laboriosam modi sequi minima iusto molestias dicta?</p>
-                </div>
-                <div class="wrap__post">
-                    <h3 class="post__date">28.03.2019</h3>
-                    <img src="../images/6.jpg" alt="post image" class="post__img">
-                    <a href="#" class="post__title">Connexion-Example of Business Blog</a>
-                    <span class="post__author">BY <a href="#" class="author__link">DAVID HYMAN</a>/ 340 VIEWS</span>
-                    <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptatum sed, mollitia a laboriosam modi sequi minima iusto molestias dicta?</p>
+            <div class="posts">
+                <div class="post-section" id="post-section">
                 </div>
                 <div class="pagination">
                     <nav aria-label="Page navigation example">
@@ -103,28 +77,31 @@
             <aside class="main-aside">
                 <div class="aside__search">
                     <label>search</label>
-                    <input type="text" placeholder="Enter your keyword">
+                    <div class="input-box">
+                        <input type="text" placeholder="Enter your keyword" id="aside-search">
+                        <button type="submit" class="input-box__button" id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
                 </div>
                 <div class="populars">
                     <h3 class="aside__title">Populars</h3>
                     <ul class="populars__list">
                         <li class="popular__item">
-                            <a href="#" class="popular__link">Management</a>
+                            <button class="popular__button" id="tag" onclick="onTagButtonClick('management')">management</button>
                         </li>
                         <li class="popular__item">
-                            <a href="#" class="popular__link">SEO</a>
+                            <button class="popular__button" id="tag" onclick="onTagButtonClick('seo')">seo</button>
                         </li>
                         <li class="popular__item">
-                            <a href="#" class="popular__link">Advisory Board</a>
+                            <button class="popular__button" id="tag" onclick="onTagButtonClick('advisory board')">advisory board</button>
                         </li>
                         <li class="popular__item">
-                            <a href="#" class="popular__link">Soft Skills</a>
+                            <button class="popular__button" id="tag" onclick="onTagButtonClick('soft skills')">soft skills</button>
                         </li>
                         <li class="popular__item">
-                            <a href="#" class="popular__link">Blogging</a>
+                            <button class="popular__button" id="tag" onclick="onTagButtonClick('blogging')">blogging</button>
                         </li>
                         <li class="popular__item">
-                            <a href="#" class="popular__link">Copywriting</a>
+                            <button class="popular__button" id="tag" onclick="onTagButtonClick('copywriting')">copywriting</button>
                         </li>
                     </ul>
                 </div>
@@ -213,6 +190,7 @@
     <footer class="footer">
         <span class="footer__text">&copy;All Rights Reserved</span>
     </footer>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
